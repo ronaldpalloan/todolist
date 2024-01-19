@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Todo List</title>
+	<link rel="stylesheet" href="stylelat.css">
+</head>
+<body>
+
+<div class="todo-container">
+	<h1>Todo List</h1>
+	<form id="todo-form" action="">
+		<label for="task">Task
+			<input type="text" id="task" name="task" placeholder="What you want to do...">
+		</label>
+		<label for="start">Start
+			<input type="text" id="start" name="start" placeholder="06:00">
+		</label>
+		<label for="end">End
+			<input type="text" id="end" name="end" placeholder="07:30">
+		</label>
+		<input type="button" value="Add" id="addButton">
+	</form>
+
+	<div class="list-todo"></div>
+</div>
+
+<script src="scriptlat.js"></script>
+</body>
+</html>
