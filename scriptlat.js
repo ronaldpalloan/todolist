@@ -2,25 +2,28 @@ const addButton = document.getElementById('addButton');
 const listTodo = document.querySelector('.list-todo');
 
 addButton.addEventListener('click', function() {
-	const inputTask = document.getElementById('task').value;
-	const inputStart = document.getElementById('start').value;
-	const inputEnd = document.getElementById('end').value;
+	const inputTask = document.getElementById('task');
+	const inputStart = document.getElementById('start');
+	const inputEnd = document.getElementById('end');
 
 	const perTodo = `
 		<div class="per-todo">
 			<div class="check"></div>
 			<div class="time">
 				<p>
-					<span id="time-start">${inputStart}</span>
+					<span id="time-start">${inputStart.value}</span>
 					-
-					<span id="time-end">${inputEnd}</span>
+					<span id="time-end">${inputEnd.value}</span>
 				</p>
 			</div>
-			<p class="todo">${inputTask}</p>
+			<p class="todo">${inputTask.value}</p>
 			<p class="delete">X</p>
 		</div>`
 
 		listTodo.innerHTML += perTodo;
+		inputTask.value = '';
+		inputStart.value= '';
+		inputEnd.value = '';
 		saveData();
 })
 
@@ -37,11 +40,11 @@ document.addEventListener('click', function(e) {
 })
 
 function saveData() {
-	localStorage.setItem('data', listTodo.innerHTML);
+	localStorage.setItem('todo', listTodo.innerHTML);
 }
 
 function showData() {
-	listTodo.innerHTML = localStorage.getItem('data')
+	listTodo.innerHTML = localStorage.getItem('todo')
 }
 
 showData();

@@ -16,7 +16,7 @@ body {
 	background-color: white;
 	padding: 30px 50px;
 	border-radius: 10px;
-	font-size: 20px;
+	font-size: 16px;
 }
 
 .todo-container h1 {
@@ -36,9 +36,10 @@ form input {
 }
 
 input#start, input#end {
-	width: 14%;
+	width: 17%;
 	margin-right: 20px;
-	padding: 5px 6px;
+	padding: 5px 1px;
+	text-align: center;
 }
 
 input[type="button"] {
