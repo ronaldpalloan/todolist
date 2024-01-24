@@ -9,34 +9,6 @@ const labelTask = document.querySelector('label[for="task"]');
 
 // Jika Tombol Add diklik
 addButton.addEventListener('click', function() {
-	// Jika inputTask kosong
-	// if (inputTask.value === '' && inputStart.value === '' && inputEnd.value === '') {
-	// 	inputTask.classList.add('red-form');
-	// 	afterInputTask.style.display = 'block';
-	// 	inputStart.classList.add('red-form');
-	// 	afterInputTime.style.display = 'block';
-	// 	inputEnd.classList.add('red-form');
-	// 	afterInputTime.style.display = 'block';
-	// 	scrollKe(labelTask);
-	// } else if (inputStart.value === '' && inputEnd.value === '') {
-	// 	inputStart.classList.add('red-form');
-	// 	afterInputTime.style.display = 'block';
-	// 	inputEnd.classList.add('red-form');
-	// 	afterInputTime.style.display = 'block';
-	// 	scrollKe(inputStart);
-	// } else if (inputTask.value === '') {
-	// 	inputTask.classList.add('red-form');
-	// 	afterInputTask.style.display = 'block';
-	// 	scrollKe(labelTask);
-	// } else if (inputStart.value === '') {
-	// 	inputStart.classList.add('red-form');
-	// 	afterInputTime.style.display = 'block';
-	// 	scrollKe(inputStart);
-	// } else if (inputEnd.value === '') {
-	// 	inputEnd.classList.add('red-form');
-	// 	afterInputTime.style.display = 'block';
-	// 	scrollKe(inputEnd);
-	// }
 	if (inputTask.value === '' || inputStart.value === '' || inputEnd.value === '') {
 		let inputValue = [inputTask, inputStart, inputEnd];
 		inputValue.forEach(a => {
