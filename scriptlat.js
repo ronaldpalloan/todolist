@@ -3,8 +3,6 @@ const listTodo = document.querySelector('.list-todo');
 const inputTask = document.getElementById('task');
 const inputStart = document.getElementById('start');
 const inputEnd = document.getElementById('end');
-const afterInputTask = document.querySelector('.after-input-task');
-const afterInputTime = document.querySelector('.after-input-time');
 
 // Jika Tombol Add diklik
 addButton.addEventListener('click', function() {
