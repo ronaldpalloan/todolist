@@ -1,11 +1,13 @@
 const addButton = document.getElementById('addButton');
 const listTodo = document.querySelector('.list-todo');
+const inputTask = document.getElementById('task');
+const inputStart = document.getElementById('start');
+const inputEnd = document.getElementById('end');
+const afterInputTask = document.querySelector('.after-input-task');
+const afterInputTime = document.querySelector('.after-input-time');
 
+// Jika Tombol Add diklik
 addButton.addEventListener('click', function() {
-	const inputTask = document.getElementById('task');
-	const inputStart = document.getElementById('start');
-	const inputEnd = document.getElementById('end');
-
 	const perTodo = `
 		<div class="per-todo">
 			<div class="check"></div>
@@ -24,12 +26,13 @@ addButton.addEventListener('click', function() {
 		inputTask.value = '';
 		inputStart.value= '';
 		inputEnd.value = '';
+		
 		saveData();
 })
 
 document.addEventListener('click', function(e) {
 	if (e.target.classList.contains('check')) {
-		e.target.classList.toggle('checked'); 
+		e.target.classList.toggle('checked');
 	}
 
 	if (e.target.classList.contains('delete')) {

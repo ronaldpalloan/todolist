@@ -35,6 +35,24 @@ form input {
 	font-size: 1em;
 }
 
+.red-form {
+	border: 2px solid red;
+}
+
+.after-input-task {
+	font-size: 12px;
+	color: red;
+	margin-top: -8px;
+	display: none;
+}
+
+.after-input-time {
+	font-size: 12px;
+	color: red;
+	margin-top: -8px;
+	display: none;
+}
+
 input#start, input#end {
 	width: 17%;
 	margin-right: 20px;
@@ -73,6 +91,10 @@ input[type="button"] {
 
 .checked {
 	background-image: url(images/checked.png);
+}
+
+.linethrough {
+	text-decoration: line-through;
 }
 
 .time {
