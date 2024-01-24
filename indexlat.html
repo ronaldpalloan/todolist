@@ -12,13 +12,13 @@
 	<h1>Todo List</h1>
 	<form id="todo-form" action="">
 		<label for="task">Task
-			<input type="text" id="task" name="task" placeholder="What you want to do..."><p class="after-input-task">tulis yang mau dikerjakan</p>
+			<input type="text" id="task" name="task" placeholder="What you want to do..." class=""><p class="after-input-task">tulis yang mau dikerjakan</p>
 		</label>
 		<label for="start">Start
-			<input type="text" id="start" name="start" placeholder="00:00">
+			<input type="text" id="start" name="start" placeholder="00:00" maxlength="5">
 		</label>
 		<label for="end">End
-			<input type="text" id="end" name="end" placeholder="00:00">
+			<input type="text" id="end" name="end" placeholder="00:00" maxlength="5">
 		</label>
 		<p class="after-input-time">tulis waktu dengan benar (format 00:00)</p>
 		<input type="button" value="Add" id="addButton">
