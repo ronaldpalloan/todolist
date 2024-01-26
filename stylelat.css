@@ -79,10 +79,27 @@ input[type="button"] {
 	margin: 20px 0;
 }
 
+.todo input {
+	width: 100%;
+	border-radius: 5px;
+	font-size: 1em;
+}
+
+.per-todo span input {
+	width: 40%;
+	border-radius: 5px;
+	font-size: 1em;
+	text-align: center;
+}
+
+.per-todo span, .todo {
+	cursor: pointer;
+}
+
 .check {
 	border-radius: 50%;
-	width: 23px;
-	height: 23px;
+	width: 21px;
+	height: 21px;
 	background-image: url(images/unchecked.png);
 	background-size: cover;
 	cursor: pointer;

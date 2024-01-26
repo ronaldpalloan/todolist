@@ -10,6 +10,9 @@ const labelTask = document.querySelector('label[for="task"]');
 // Jika Tombol Add diklik
 addButton.addEventListener('click', function() {
 	if (inputTask.value === '' || inputStart.value === '' || inputEnd.value === '') {
+		afterInputTask.style.display = 'block';
+		afterInputTime.style.display = 'block';
+
 		let inputValue = [inputTask, inputStart, inputEnd];
 		inputValue.forEach(a => {
 			if (a.value === '') {
@@ -83,10 +86,25 @@ inputEnd.addEventListener('input', function() {
 	}
 })
 
+// FITUR EDIT
+document.addEventListener('dblclick', function(e) {
+	if (e.target.classList.contains('todo')) {		
+		editTodo(e.target);
+	} else if (e.target.id === 'time-start' || e.target.id === 'time-end') {
+		editTodo(e.target);
+	};
+
+	saveData();
+})
+
+
 // Ketika Tugas Selesai atau mau dihapus
 document.addEventListener('click', function(e) {
 	if (e.target.classList.contains('check')) {
 		e.target.classList.toggle('checked');
+
+		e.target.nextElementSibling.classList.toggle('linethrough');
+		e.target.nextElementSibling.nextElementSibling.classList.toggle('linethrough');
 	}
 
 	if (e.target.classList.contains('delete')) {
@@ -111,6 +129,20 @@ function scrollKe(tujuan) {
 	})
 }
 
-showData();
+function editTodo(todoElement) {
+	const isiAwalEdit = todoElement.innerText;
+	const createEditInput = document.createElement('input');
+	createEditInput.type = 'text';
+	createEditInput.value = isiAwalEdit;
 
+	todoElement.innerHTML = '';
+	todoElement.appendChild(createEditInput);
+	todoElement.focus();
+
+	createEditInput.addEventListener('blur', function() {
+		todoElement.innerText = createEditInput.value;
+	})
+}
+
+showData();
 
